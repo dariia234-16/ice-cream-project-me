@@ -1,37 +1,54 @@
-<article class="example" id="uk">
-  <h1>HTML-partials</h1>
-
-  <!--
-    ❗️❗️❗️ The path to images from the HTML partial
-    is the same as from the index.html file
-  -->
-  <img src="images/logo.png" alt="" width="320" />
-
-  <p>
-    The
-    <a
-      href="https://github.com/posthtml/posthtml-include"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      posthtml-include
-    </a>
-    plugin allows you to add code from other HTML files (fragments) to HTML page
-    files. Fragments are stored in the <code>src/partials</code> folder. The
-    addition occurs when compiling page files, such as <code>index.html</code>.
-  </p>
-
-  <p>
-    This <code>example.html</code> file is an example of such a snippet, with
-    the markup of a certain part of the main page. This is very convenient for
-    team development on student projects, when several people write in one HTML
-    file at once.
-  </p>
-
-  <p>
-    The syntax for adding a fragment to the main file is:
-    <code> &lt;include src="./partials/filename.html"&gt;&lt;/include&gt;</code>
-  </p>
-
-  <div class="background"></div>
-</article>
+<section class="products-section">
+  <div class="products-section-container"></div>
+  <div class="products-header-wrap">
+    <h2 class="products-first-header">100% natural</h2>
+    <h1 class="products-second-header">products</h1>
+  </div>
+  <ul class="products-card-list">
+    <li class="products-card">
+      <img alt="pink-ice-cream" />
+      <svg width="25" height="6" class="products-card-icon">
+        <use></use>
+      </svg>
+      <p>
+        Indulge in our rich and creamy ice cream, handcrafted with all-natural
+        ingredients and available in a variety of flavors.
+      </p>
+      <button class="product-card-button" type="button">
+        <svg>
+          <use></use>
+        </svg>
+      </button>
+    </li>
+    <li class="products-card">
+      <img alt="ice-coffee-with-straw" />
+      <svg width="25" height="6" class="products-card-icon">
+        <use></use>
+      </svg>
+      <p>
+        Refresh and energize with our perfectly brewed iced coffee, made with
+        high-quality beans and served over ice.
+      </p>
+      <button class="product-card-button" type="button">
+        <svg>
+          <use></use>
+        </svg>
+      </button>
+    </li>
+    <li class="products-card">
+      <img alt="milkshake-with-biscuits-and-marshmallows" />
+      <svg width="25" height="6" class="products-card-icon">
+        <use></use>
+      </svg>
+      <p>
+        Satisfy your sweet tooth with our thick, made with premium ice cream,
+        topped with whipped cream and your favorite toppings.
+      </p>
+      <button class="product-card-button" type="button">
+        <svg>
+          <use></use>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</section>
