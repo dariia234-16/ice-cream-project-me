@@ -9,6 +9,8 @@ body {
   font-family: var(--main-font);
 }
 
+// decoration styles products
+
 .products-header-wrap {
   font-family: var(--header-font);
 }
@@ -18,11 +20,59 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
+  text-align: center;
+  font-family: 'Titan One', sans-serif;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  line-height: normal;
 }
 
 .products-second-header {
   color: var(--dark-red-brand-color);
   text-transform: uppercase;
-  font-size: 58px;
+  font-size: 34px;
   margin: 0;
+  text-align: center;
+  font-family: 'Titan One', sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.48px;
+}
+
+@media screen and (min-width: 728px) {
+  .products-first-header {
+    font-size: 26px;
+  }
+
+  .products-second-header {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products-first-header {
+    font-size: 30px;
+  }
+
+  .products-second-header {
+    font-size: 58px;
+  }
+}
+
+.products-section-container {
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.products-card-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.products-card {
+  max-width: 368px;
+  height: auto;
 }
