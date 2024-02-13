@@ -8,6 +8,10 @@
   --bgc-products_second-color: #f0d1a5;
   --bgc-products_third-color: #c2e297;
   --white-text-color: #fff;
+  --light-coral-background-color: #fff5f6;
+  --black-color: #000;
+  --gray-color: #e1e1e1;
+  --brown-color: #907e82;
 }
 
 body {
@@ -216,7 +220,6 @@ body {
   }
   .products-card {
     width: 224px;
-    min-height: 473px;
   }
   .products-card-image {
     width: 224px;
@@ -271,10 +274,281 @@ ul {
   padding: 0;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .is-hidden {
   display: none;
 }
 
 .map-button-icon {
   fill: black;
+}
+
+.social-media-footer-icon {
+  fill: pink;
+  stroke: white;
+}
+
+.background-container {
+  background: repeating-linear-gradient(to bottom, #ffffff 0%, #ffffff 16%, #fff5f6 16%, #fff5f6 100%);
+}
+
+.contacts-section {
+  margin-top: 60px;
+}
+
+.contacts-card-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.contacts-card {
+  background-color: var(--white-text-color);
+  text-align: left;
+  box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 280px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px 40px 32px;
+  min-height: 412px;
+}
+
+.type-of-location {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 186%; /* 22.32px */
+  letter-spacing: 0.48px;
+  width: 80px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  align-self: flex-start;
+  text-transform: uppercase;
+}
+
+.cafe-location-type {
+  background-color: var(--bgc-products_second-color);
+}
+
+.foodtruck-location-type {
+  background-color: var(--bgc-products_third-color);
+  width: 130px;
+}
+
+.card-location-title {
+  color: var(--black-color);
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 186%; /* 22.32px */
+  letter-spacing: 0.48px;
+  padding-bottom: 8px;
+}
+
+.card-location-and-description {
+  display: block;
+  border-bottom: solid 2px var(--gray-color);
+  padding-bottom: 20px;
+}
+
+.card-location-description {
+  color: #907e82;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px; /* 150% */
+  letter-spacing: 0.48px;
+}
+
+.fixed-lines {
+  line-height: 1.2em; /* Adjust as needed */
+  height: 2.4em; /* Assuming each line is 1.2em tall */
+  overflow: hidden;
+}
+
+.week-and-hours-availability {
+  display: block;
+  display: block;
+  border-bottom: solid 2px var(--gray-color);
+  padding-bottom: 20px;
+  width: 216px;
+}
+
+.card-week-availability {
+  color: var(--black-color);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 186%; /* 22.32px */
+}
+
+.card-hours-availability {
+  color: var(--coral-pink-headers);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 186%; /* 22.32px */
+}
+
+.contacts-card-link {
+  color: var(--brown-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 183%; /* 29.28px */
+}
+
+.contacts-card-link:hover {
+  color: var(--dark-red-brand-color);
+}
+
+@media screen and (728px <= width < 1200px) {
+  .background-container {
+    background: repeating-linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #fff5f6 50%, #fff5f6 100%);
+  }
+  .contacts-card-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+  }
+  .contacts-card {
+    width: 224px;
+    gap: 32px;
+  }
+  .type-of-location {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .card-location-title {
+    font-size: 14px;
+  }
+  .card-location-description {
+    font-size: 14px;
+  }
+  .week-and-hours-availability {
+    width: 160px;
+  }
+  .card-week-availability {
+    font-size: 14px;
+  }
+  .card-hours-availability {
+    font-size: 14px;
+  }
+  .contacts-card-link {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .background-container {
+    background: repeating-linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #fff5f6 50%, #fff5f6 100%);
+  }
+  .contacts-card-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+  }
+  .contacts-card {
+    width: 368px;
+  }
+  .type-of-location {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .card-location-title {
+    font-size: 16px;
+  }
+  .card-location-description {
+    font-size: 16px;
+  }
+  .week-and-hours-availability {
+    width: 288px;
+  }
+  .card-week-availability {
+    font-size: 16px;
+  }
+  .card-hours-availability {
+    font-size: 16px;
+  }
+  .contacts-card-link {
+    font-size: 16px;
+  }
+}
+.contacts-button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.contacts-button {
+  color: var(--white-text-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 22px;
+  width: 161px;
+  min-height: 44px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-button {
+  background-color: var(--dark-red-brand-color);
+}
+
+.franchise-button {
+  background-color: var(--white-text-color);
+  color: var(--dark-red-brand-color);
+}
+
+@media screen and (728px <= width < 1200px) {
+  .contacts-button-section {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+  .contacts-button {
+    width: 192px;
+    height: 44px;
+  }
+  .franchise-button {
+    width: 174px;
+    height: 44px;
+  }
+}
+@media screen and (width >= 1200px) {
+  .contacts-button-section {
+    flex-direction: row;
+    margin-bottom: 121px;
+  }
+  .contacts-button {
+    width: 198px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+  }
+  .franchise-button {
+    width: 168px;
+    height: 44px;
+  }
 }/*# sourceMappingURL=index.css.map */

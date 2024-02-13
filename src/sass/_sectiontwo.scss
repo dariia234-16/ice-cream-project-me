@@ -7,6 +7,10 @@
   --bgc-products_second-color: #f0d1a5;
   --bgc-products_third-color: #c2e297;
   --white-text-color: #fff;
+  --light-coral-background-color: #fff5f6;
+  --black-color: #000;
+  --gray-color: #e1e1e1;
+  --brown-color: #907e82;
 }
 
 body {
@@ -224,7 +228,6 @@ body {
 
   .products-card {
     width: 224px;
-    min-height: 473px;
   }
 
   .products-card-image {
@@ -289,4 +292,8 @@ h3 {
 ul {
   margin: 0;
   padding: 0;
+}
+
+.link {
+  text-decoration: none;
 }
