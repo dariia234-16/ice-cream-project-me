@@ -651,6 +651,18 @@ ul {
   line-height: normal;
   letter-spacing: 1.36px;
   text-transform: uppercase;
+  display: block;
+}
+
+.made {
+  color: var(--coral-pink-headers);
+  font-family: "Titan One", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
 
 .social-media-list-footer {
@@ -672,10 +684,10 @@ ul {
   text-align: right;
   font-size: 12px;
   font-weight: 700;
-  line-height: 186%; /* 22.32px */
+  line-height: 186%;
   transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic bezier(0.4, 0, 0.2, 1); /* 22.32px */
 }
 
 .appeal-to-call-link {
@@ -722,6 +734,10 @@ ul {
     line-height: normal;
     letter-spacing: 1.04px;
   }
+  .made {
+    font-size: 26px;
+    display: inline;
+  }
   .footer-second-title {
     font-size: 48px;
     letter-spacing: 2.88px;
@@ -755,10 +771,16 @@ ul {
   .line-break-footer {
     display: none;
   }
+  .made {
+    display: inline;
+    font-size: 30px;
+  }
   .footer-container {
     display: flex;
     gap: 128px;
     justify-content: space-between;
+    transition-duration: 250ms;
+    transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
   }
   .footer-first-title {
     font-size: 30px;
