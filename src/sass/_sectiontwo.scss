@@ -21,7 +21,6 @@ body {
 
 .products-header-wrap {
   font-family: var(--header-font);
-  margin-bottom: 8px;
 }
 
 .products-first-header {
@@ -35,6 +34,14 @@ body {
   line-height: normal;
   letter-spacing: 1.2px;
   line-height: normal;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
+}
+
+.products-first-header:hover,
+.products.first-header:focus {
+  transform: scale(1.5);
 }
 
 .products-second-header {
@@ -48,6 +55,14 @@ body {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 3.48px;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
+}
+
+.products-second-header:hover,
+.products-second-header:focus {
+  transform: scale(1.5);
 }
 
 .container {
@@ -81,7 +96,6 @@ body {
   transition-property: transform, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
-  position: relative;
   margin-top: 80px;
 }
 
@@ -120,6 +134,7 @@ body {
   line-height: normal;
   letter-spacing: 0.8px;
   text-transform: uppercase;
+  position: relative;
 }
 
 .products-card-icon {
@@ -151,7 +166,8 @@ body {
   transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
 }
 
-.icecoffee:hover {
+.icecoffee:hover,
+.icecoffee:focus {
   background-color: #cb9c5bb1;
 }
 
@@ -162,7 +178,8 @@ body {
   transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
 }
 
-.icecream:hover {
+.icecream:hover,
+.icecream:focus {
   background-color: #e5a7b8;
 }
 
@@ -173,7 +190,8 @@ body {
   transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
 }
 
-.milkshake:hover {
+.milkshake:hover,
+.milkshake:focus {
   background-color: #b2ce8c;
 }
 
