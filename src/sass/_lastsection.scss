@@ -1,5 +1,24 @@
 // contacts styles
 
+// :root {
+//   --white-text-color: #ffffff;
+//   --red-text-color: #d41443;
+//   --cream-text-color: #ffa5ba;
+//   --black-text-color: #000000;
+//   --gray-text-color: #907e82;
+//   --light-pink-color: #fff5f6;
+//   --products-first-color: #ffb8ca;
+//   --yellow-color: #f0d1a5;
+//   --green-color: #c2e297;
+//   --footer-btn-red-color: #d41342;
+//   --modal-color: #e17992;
+//   --icon-color: #fea5bb;
+//   --font-main: 'Titan One', 'sans-serif';
+//   --font-secondary: 'DM Sans', 'sans-serif';
+//   --bgc-contacts_first-color: #f0d1a5;
+//   --bgc-contacts_second-color: #c2e297;
+// }
+
 .map-button-icon {
   fill: var(--black-color);
 }
@@ -446,10 +465,6 @@
 
 // footer styles
 
-.large-footer-container {
-  padding-bottom: 4px;
-}
-
 .footer-container {
   padding-bottom: 40px;
   border-bottom: 2px solid var(--gray-color);
@@ -607,11 +622,6 @@
     display: none;
   }
 
-  .made {
-    display: inline;
-    font-size: 30px;
-  }
-
   .footer-container {
     display: flex;
     gap: 128px;
@@ -625,9 +635,25 @@
     letter-spacing: 1.2px;
   }
 
+  .made {
+    display: inline-block;
+    font-size: 30px;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .made:hover {
+    transform: translate(-190px, 40px);
+    color: var(--dark-red-brand-color);
+  }
+
   .footer-second-title {
     font-size: 58px;
     letter-spacing: 3.48px;
+  }
+
+  .made:hover ~ .footer-second-title {
+    transition: transform 0.8s ease-in-out;
+    transform: translateY(30px);
   }
 
   .social-media-footer-icon {

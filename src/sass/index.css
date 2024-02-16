@@ -682,10 +682,6 @@ ul {
     transform: translateY(-50%);
   }
 }
-.large-footer-container {
-  padding-bottom: 4px;
-}
-
 .footer-container {
   padding-bottom: 40px;
   border-bottom: 2px solid var(--gray-color);
@@ -832,10 +828,6 @@ ul {
   .line-break-footer {
     display: none;
   }
-  .made {
-    display: inline;
-    font-size: 30px;
-  }
   .footer-container {
     display: flex;
     gap: 128px;
@@ -847,9 +839,22 @@ ul {
     font-size: 30px;
     letter-spacing: 1.2px;
   }
+  .made {
+    display: inline-block;
+    font-size: 30px;
+    transition: transform 0.8s ease-in-out;
+  }
+  .made:hover {
+    transform: translate(-190px, 40px);
+    color: var(--dark-red-brand-color);
+  }
   .footer-second-title {
     font-size: 58px;
     letter-spacing: 3.48px;
+  }
+  .made:hover ~ .footer-second-title {
+    transition: transform 0.8s ease-in-out;
+    transform: translateY(30px);
   }
   .social-media-footer-icon {
     width: 34px;
