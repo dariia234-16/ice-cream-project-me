@@ -1,12 +1,12 @@
 // contacts styles
 
 .map-button-icon {
-  fill: black;
+  fill: var(--black-color);
 }
 
 .social-media-footer-icon {
-  fill: pink;
-  stroke: white;
+  fill: var(--coral-pink-headers);
+  stroke: var(--white-text-color);
 }
 
 .social-media-footer-icon:hover,
@@ -76,6 +76,8 @@
   border-radius: 5px;
   align-self: flex-start;
   text-transform: uppercase;
+  padding: 10px;
+  margin-left: -5px;
 }
 
 .cafe-location-type {
@@ -102,6 +104,7 @@
   display: block;
   border-bottom: solid 2px var(--gray-color);
   padding-bottom: 20px;
+  width: 216px;
 }
 
 .card-location-description {
@@ -138,6 +141,10 @@
   line-height: 186%; /* 22.32px */
 }
 
+.weekday-card-hours-availability {
+  padding-bottom: 6px;
+}
+
 .card-hours-availability {
   color: var(--coral-pink-headers);
   font-size: 12px;
@@ -156,6 +163,10 @@
 .contacts-card-link:hover,
 .contacts-card-link:focus {
   color: var(--dark-red-brand-color);
+}
+
+.card-address-container {
+  width: 216px;
 }
 
 @media screen and (768px <= width < 1200px) {
@@ -178,24 +189,35 @@
 
   .contacts-card {
     width: 224px;
+    min-height: 528px;
     gap: 32px;
   }
 
   .type-of-location {
     font-size: 14px;
-    margin-bottom: 12px;
+    margin-left: -5px;
   }
 
   .card-location-title {
     font-size: 14px;
   }
 
+  .card-location-and-description {
+    width: 159px;
+  }
+
   .card-location-description {
     font-size: 14px;
+    padding-bottom: 10px;
   }
 
   .week-and-hours-availability {
-    width: 160px;
+    width: 159px;
+    padding-bottom: 24px;
+  }
+
+  .weekday-card-hours-availability {
+    padding-bottom: 10px;
   }
 
   .card-week-availability {
@@ -208,6 +230,10 @@
 
   .contacts-card-link {
     font-size: 14px;
+  }
+
+  .card-address-container {
+    width: 159px;
   }
 }
 
@@ -230,23 +256,32 @@
 
   .contacts-card {
     width: 368px;
+    min-height: 538px;
   }
 
   .type-of-location {
     font-size: 16px;
     margin-bottom: 12px;
+    margin-left: 0px;
   }
 
   .card-location-title {
     font-size: 16px;
   }
 
+  .card-location-and-description {
+    width: 288px;
+  }
+
   .card-location-description {
     font-size: 16px;
+    padding-bottom: 10px;
   }
 
   .week-and-hours-availability {
     width: 288px;
+    padding-bottom: 20px;
+    padding-top: 5px;
   }
 
   .card-week-availability {
@@ -257,8 +292,17 @@
     font-size: 16px;
   }
 
+  .weekday-card-hours-availability {
+    padding-bottom: 10px;
+  }
+
   .contacts-card-link {
     font-size: 16px;
+  }
+
+  .card-address-container {
+    width: 288px;
+    padding-top: 12px;
   }
 }
 

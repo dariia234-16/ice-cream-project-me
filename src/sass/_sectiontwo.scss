@@ -37,6 +37,7 @@ body {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .products-first-header:hover,
@@ -134,7 +135,6 @@ body {
   line-height: normal;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  position: relative;
 }
 
 .products-card-icon {
@@ -156,7 +156,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 32px;
-  display: relative;
 }
 
 .icecoffee {
