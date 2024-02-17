@@ -108,6 +108,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: center;
   align-items: center;
   padding-left: 32px;
   padding-right: 32px;
@@ -117,6 +118,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
   margin-top: 80px;
+  min-height: 489px;
 }
 
 .products-card:hover {
@@ -143,6 +145,7 @@ body {
   padding-right: 32px;
   border-radius: 24px;
   padding-bottom: 40px;
+  padding: 0;
 }
 
 .products-card-header {
@@ -187,6 +190,21 @@ body {
 .icecoffee:hover,
 .icecoffee:focus {
   background-color: #cb9c5bb1;
+}
+
+.products-card-2:nth-child(2):before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 280px;
+  height: 280px;
+  background-image: url(../images/icecoffee.jpg);
+  background-size: 280px 280px;
+  bottom: 350px;
 }
 
 .icecream {

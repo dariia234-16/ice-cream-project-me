@@ -88,6 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: center;
   align-items: center;
   padding-left: 32px;
   padding-right: 32px;
@@ -97,6 +98,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
   margin-top: 80px;
+  min-height: 489px;
 }
 
 .products-card:hover {
@@ -121,6 +123,7 @@ body {
   padding-right: 32px;
   border-radius: 24px;
   padding-bottom: 40px;
+  padding: 0;
 }
 
 .products-card-header {
@@ -165,6 +168,19 @@ body {
 .icecoffee:hover,
 .icecoffee:focus {
   background-color: rgba(203, 156, 91, 0.6941176471);
+}
+
+.products-card-2:nth-child(2):before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 280px;
+  height: 280px;
+  background-image: url(../images/icecoffee.jpg);
+  background-size: 280px 280px;
+  bottom: 350px;
 }
 
 .icecream {
@@ -295,18 +311,28 @@ ul {
   text-decoration: none;
 }
 
-.map-button-icon {
-  fill: var(--black-color);
+:root {
+  --font-main: "Titan One", sans-serif;
+  --font-secondary: "DM Sans", sans-serif;
+  --cream-text-color: #ffa5ba;
+  --red-text-color: #d41443;
+  --products-first-color: #ffb8ca;
+  --yellow-color: #f0d1a5;
+  --green-color: #c2e297;
+  --white-text-color: #fff;
+  --light-pink-color: #fff5f6;
+  --black-text-color: #000;
+  --light-gray-color: #e1e1e1;
+  --gray-text-color: #907e82;
+  --icon-color: #fea5bb;
+  --footer-btn-red-color: #d41342;
+  --modal-color: #e17992;
 }
 
-.social-media-footer-icon {
-  fill: var(--coral-pink-headers);
-  stroke: var(--white-text-color);
-}
-
-.social-media-footer-icon:hover,
-.social-media-footer-icon:focus {
-  fill: var(--dark-red-brand-color);
+.containerz {
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
 }
 
 .background-container {
@@ -368,16 +394,16 @@ ul {
 }
 
 .cafe-location-type {
-  background-color: var(--bgc-products_second-color);
+  background-color: var(--yellow-color);
 }
 
 .foodtruck-location-type {
-  background-color: var(--bgc-products_third-color);
+  background-color: var(--green-color);
   width: 130px;
 }
 
 .card-location-title {
-  color: var(--black-color);
+  color: var(--black-text-color);
   font-family: "DM Sans";
   font-size: 12px;
   font-style: normal;
@@ -389,13 +415,13 @@ ul {
 
 .card-location-and-description {
   display: block;
-  border-bottom: solid 2px var(--gray-color);
+  border-bottom: solid 2px var(--light-gray-color);
   padding-bottom: 20px;
   width: 216px;
 }
 
 .card-location-description {
-  color: #907e82;
+  color: var(--gray-text-color);
   font-size: 12px;
   font-weight: 500;
   line-height: 18px; /* 150% */
@@ -403,12 +429,12 @@ ul {
 }
 
 .card-location-description::-moz-selection {
-  background-color: var(--brown-color);
+  background-color: var(--gray-text-color);
   color: white;
 }
 
 .card-location-description::selection {
-  background-color: var(--brown-color);
+  background-color: var(--gray-text-color);
   color: white;
 }
 
@@ -421,13 +447,13 @@ ul {
 .week-and-hours-availability {
   display: block;
   display: block;
-  border-bottom: solid 2px var(--gray-color);
+  border-bottom: solid 2px var(--light-gray-color);
   padding-bottom: 20px;
   width: 216px;
 }
 
 .card-week-availability {
-  color: var(--black-color);
+  color: var(--black-text-color);
   font-size: 12px;
   font-weight: 500;
   line-height: 186%; /* 22.32px */
@@ -438,14 +464,14 @@ ul {
 }
 
 .card-hours-availability {
-  color: var(--coral-pink-headers);
+  color: var(--cream-text-color);
   font-size: 12px;
   font-weight: 500;
   line-height: 186%; /* 22.32px */
 }
 
 .contacts-card-link {
-  color: var(--brown-color);
+  color: var(--gray-text-color);
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -454,7 +480,7 @@ ul {
 
 .contacts-card-link:hover,
 .contacts-card-link:focus {
-  color: var(--dark-red-brand-color);
+  color: var(--red-text-color);
 }
 
 .card-address-container {
@@ -587,12 +613,16 @@ ul {
 }
 
 .map-button {
-  background-color: var(--dark-red-brand-color);
+  background-color: var(--red-text-color);
+}
+
+.map-button-icon {
+  fill: var(--black-text-color);
 }
 
 .franchise-button {
   background-color: var(--white-text-color);
-  color: var(--dark-red-brand-color);
+  color: var(--red-text-color);
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic bezier(0.4, 0, 0.2, 1);
@@ -600,7 +630,7 @@ ul {
 
 .franchise-button:hover,
 .franchise-button:focus {
-  background-color: var(--dark-red-brand-color);
+  background-color: var(--red-text-color);
   color: var(--white-text-color);
 }
 
@@ -613,7 +643,7 @@ ul {
 }
 
 .open-franchise-icon {
-  stroke: var(--dark-red-brand-color);
+  stroke: var(--red-text-color);
 }
 
 @media screen and (768px <= width < 1200px) {
@@ -684,7 +714,7 @@ ul {
 }
 .footer-container {
   padding-bottom: 40px;
-  border-bottom: 2px solid var(--gray-color);
+  border-bottom: 2px solid var(--light-gray-color);
 }
 
 .footer-title-part {
@@ -692,7 +722,7 @@ ul {
 }
 
 .footer-first-title {
-  color: var(--coral-pink-headers);
+  color: var(--cream-text-color);
   font-family: "Titan One", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -701,7 +731,7 @@ ul {
 }
 
 .footer-second-title {
-  color: var(--dark-red-brand-color);
+  color: var(--red-text-color);
   font-family: "Titan One", sans-serif;
   font-size: 34px;
   font-weight: 400;
@@ -712,7 +742,7 @@ ul {
 }
 
 .made {
-  color: var(--coral-pink-headers);
+  color: var(--cream-text-color);
   font-family: "Titan One", sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -737,7 +767,7 @@ ul {
 }
 
 .appeal-to-call {
-  color: var(--black-color);
+  color: var(--black-text-color);
   text-align: right;
   font-size: 12px;
   font-weight: 700;
@@ -748,7 +778,7 @@ ul {
 }
 
 .appeal-to-call-link {
-  color: var(--dark-red-brand-color);
+  color: var(--red-text-color);
   font-size: 14px;
   font-weight: 700;
   line-height: 186%;
@@ -763,7 +793,7 @@ ul {
 }
 
 .all-rights-reserved-text {
-  color: var(--brown-color);
+  color: var(--gray-text-color);
   text-align: center;
   font-size: 14px;
   font-weight: 700;
@@ -776,6 +806,30 @@ ul {
 .all-rights-reserved-text:hover,
 .all-rights-reserved-text:focus {
   transform: scale(1.2);
+}
+
+.social-media-footer-item {
+  background-color: var(--cream-text-color);
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 50%;
+  max-width: 32px;
+  max-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  min-width: 32px;
+}
+
+.social-media-footer-icon {
+  fill: white;
+}
+
+.social-media-footer-item:hover,
+.social-media-footer-item:focus {
+  background-color: var(--red-text-color);
 }
 
 @media screen and (768px <= width < 1200px) {
@@ -807,9 +861,26 @@ ul {
   .social-media-list-footer {
     gap: 30px;
   }
+  .social-media-footer-item {
+    background-color: var(--coral-pink-headers);
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 50%;
+    max-width: 32px;
+    max-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    min-width: 32px;
+  }
   .social-media-footer-icon {
-    width: 34px;
-    height: 34px;
+    fill: white;
+  }
+  .social-media-footer-item:hover,
+  .social-media-footer-item:focus {
+    background-color: var(--dark-red-brand-color);
   }
   .appeal-to-call {
     width: 268px;
@@ -838,27 +909,53 @@ ul {
   .footer-first-title {
     font-size: 30px;
     letter-spacing: 1.2px;
+    transition: transform 0.8s ease-in-out;
+    display: inline-flex;
+  }
+  .footer-title-part:hover .footer-first-title {
+    transform: translateX(40px);
   }
   .made {
     display: inline-block;
     font-size: 30px;
     transition: transform 0.8s ease-in-out;
+    margin-left: 5px;
   }
-  .made:hover {
-    transform: translate(-190px, 40px);
+  .footer-title-part:hover .made {
+    transform: translate(-190px, 25px);
     color: var(--dark-red-brand-color);
   }
   .footer-second-title {
     font-size: 58px;
     letter-spacing: 3.48px;
+    padding-top: 10px;
   }
-  .made:hover ~ .footer-second-title {
-    transition: transform 0.8s ease-in-out;
-    transform: translateY(30px);
+  .social-media-footer-item {
+    background-color: var(--coral-pink-headers);
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 50%;
+    max-width: 32px;
+    max-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    min-width: 34px;
   }
   .social-media-footer-icon {
-    width: 34px;
-    height: 34px;
+    fill: white;
+  }
+  .social-media-footer-item:hover,
+  .social-media-footer-item:focus {
+    background-color: var(--dark-red-brand-color);
+  }
+  .telegram-item {
+    padding-left: 5px;
+  }
+  .facebook-item {
+    padding-right: 5px;
   }
   .all-rights-reserved-container {
     padding-top: 7px;
@@ -895,11 +992,11 @@ ul {
   width: 392px;
   padding: 72px 24px 24px 24px;
   border-radius: 10px;
-  border: 4px solid var(--coral-pink-headers);
+  border: 4px solid var(--cream-text-color);
 }
 
 .franchise-form-main-text {
-  color: var(--dark-red-brand-color);
+  color: var(--red-text-color);
   text-align: center;
   font-size: 18px;
 }
@@ -918,12 +1015,12 @@ ul {
 }
 
 .franchise-form-label {
-  color: var(--brown-color);
+  color: var(--gray-text-color);
   font-size: 14px;
 }
 
 .franchise-form-input {
-  color: var(--brown-color);
+  color: var(--gray-text-color);
   height: 30px;
   padding-left: 10px;
   border: 1px solid var(--brown-color);
@@ -932,7 +1029,7 @@ ul {
 
 .franchise-form-input:hover,
 .franchise-form-input:focus {
-  border: 1px solid var(--coral-pink-headers);
+  border: 1px solid var(--cream-text-color);
   outline: none;
 }
 
@@ -942,40 +1039,40 @@ ul {
   padding-left: 10px;
   padding-top: 5px;
   margin-bottom: 20px;
-  color: var(--brown-color);
+  color: var(--gray-text-color);
 }
 
 .franchise-form-text-area:hover,
 .franchise-form-text-area:focus {
-  border: 1px solid var(--coral-pink-headers);
+  border: 1px solid var(--cream-text-color);
   outline: none;
 }
 
 .franchise-form-submit-button {
-  color: var(--dark-red-brand-color);
+  color: var(--red-text-color);
   border-radius: 50px;
   margin: 0 auto;
   padding: 7px 14px 7px 14px;
   background-color: var(--white-text-color);
   cursor: pointer;
-  border: 2px solid var(--coral-pink-headers);
+  border: 2px solid var(--cream-text-color);
 }
 
 .franchise-form-submit-button:hover,
 .franchise-form-submit-button:focus {
-  background-color: var(--coral-pink-headers);
+  background-color: var(--cream-text-color);
   color: var(--white-text-color);
 }
 
 .modal-window-close-button {
-  border: 1px solid var(--coral-pink-headers);
+  border: 1px solid var(--cream-text-color);
   border-radius: 30px;
   padding: 6px;
   position: absolute;
   right: 20px;
   top: 20px;
   background-color: var(--white-text-color);
-  fill: var(--coral-pink-headers);
+  fill: var(--cream-text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -985,7 +1082,7 @@ ul {
 
 .modal-window-close-button:hover,
 .modal-window-close-button:focus {
-  background-color: var(--coral-pink-headers);
+  background-color: var(--cream-text-color);
   fill: var(--white-text-color);
 }
 
@@ -1022,11 +1119,11 @@ ul {
   align-items: center;
   gap: 10px;
   border-radius: 10px;
-  border: 4px solid var(--coral-pink-headers);
+  border: 4px solid var(--cream-text-color);
 }
 
 .locations-form-main-text {
-  color: var(--dark-red-brand-color);
+  color: var(--red-text-color);
   font-size: 24px;
   text-align: center;
 }
@@ -1034,25 +1131,30 @@ ul {
 .locations-modal-description {
   margin-bottom: 10px;
   margin-top: 10px;
-  color: var(--dark-red-brand-color);
+  color: var(--red);
 }
 
 .google-maps-container {
-  border: 2px solid var(--coral-pink-headers);
+  border: 2px solid var(--cream-text-color);
+  height: 303px;
+}
+
+.locations-modal-google-map {
+  border: 2px solid var(--cream-text-color);
 }
 
 .locations-modal-button {
-  color: var(--dark-red-brand-color);
+  color: var(--red-text-color);
   border-radius: 50px;
   margin: 0 auto;
   padding: 7px 14px 7px 14px;
   background-color: var(--white-text-color);
   cursor: pointer;
-  border: 2px solid var(--coral-pink-headers);
+  border: 2px solid var(--cream-text-color);
 }
 
 .locations-modal-button:hover,
 .locations-modal-button:focus {
-  background-color: var(--coral-pink-headers);
+  background-color: var(--cream-text-color);
   color: var(--white-text-color);
 }/*# sourceMappingURL=index.css.map */
